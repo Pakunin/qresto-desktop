@@ -1,0 +1,32 @@
+.root{
+    -fx-background-color: #1E1E1E;
+}
+
+#lpane{
+    -fx-background-color: #170030;
+}
+
+#cbt{
+    -fx-background-color: #393939;
+}
+
+#cbt:hover{
+    -fx-background-color: #555555;
+}
+
+#loginbt{
+    -fx-background-color: #393939;
+}
+
+#loginbt:hover{
+    -fx-background-color: #555555;
+}
+
+#dashtext{
+    -fx-translate-y: 20px;
+    -fx-font-size: 20px;
+}
+
+#upload{
+    -fx-font-size: 30px;
+}
