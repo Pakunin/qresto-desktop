@@ -52,6 +52,10 @@ public class LoginController {
         if (!emailField.isVisible() && db_password != null && Objects.equals(db_password, "test")){
             SceneManager.changeScene(event, "AdminLogin.fxml");
         }
+
+        else {
+            SceneManager.changeScene(event, "FacultyLogin.fxml");
+        }
     }
 
 

@@ -14,7 +14,7 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
-        stage.setMaximized(true);
+        stage.setMaximized(false);
     }
 
     public static void main(String[] args) {

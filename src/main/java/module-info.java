@@ -10,6 +10,7 @@ module proj.qr_attendance_system {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens proj.qr_attendance_system to javafx.fxml;
     exports proj.qr_attendance_system;
