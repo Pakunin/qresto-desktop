@@ -11,6 +11,10 @@ module proj.qr_attendance_system {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires com.google.zxing;
+    requires java.desktop;
+    requires com.google.zxing.javase;
+    requires javafx.swing;
 
     opens proj.qr_attendance_system to javafx.fxml;
     exports proj.qr_attendance_system;
