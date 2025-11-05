@@ -1,23 +1,44 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# 1. Maven Build Artifacts and Output (Crucial)
+# Excludes the main compiled output directory
+/target/
+# Excludes generated files within source folders (a safer way to handle this)
+!**/src/main/**/
+!**/src/test/**/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
+# Safely includes the Maven Wrapper JAR needed for others to build the project
+!.mvn/wrapper/maven-wrapper.jar
+
+---
+
+# 2. IntelliJ IDEA Files (Focus on User/Local Config)
+# Ignore the entire .idea folder contents except for specific, required shared files
+.idea/
+# EXCEPTION: Allow the files required for project setup and sharing
+!/.idea/modules.xml
+!/.idea/jarRepositories.xml
+!/.idea/compiler.xml
+!/.idea/vcs.xml # Important for shared VCS settings (like mapping git roots)
+!/.idea/codeStyles/ # Recommended to share code style settings
+
+# Explicitly ignore user-specific files that cause conflicts
+.idea/workspace.xml
+.idea/tasks.xml
 .idea/libraries/
 *.iws
 *.iml
 *.ipr
+
+---
+
+# 3. IDE Agnostic Exclusions
+# These sections are included for developers who might use other IDEs.
 
 ### Eclipse ###
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
@@ -28,11 +49,11 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+---
+
+# 4. OS Files
 .DS_Store
