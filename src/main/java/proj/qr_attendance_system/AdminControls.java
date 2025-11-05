@@ -4,13 +4,8 @@ import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 public class AdminControls {
     @FXML
@@ -35,33 +30,25 @@ public class AdminControls {
     private PasswordField StudentPasswordField;
 
     public void addFaculty() {
-        String email = FacultyEmailField.getText();
-        String password = FacultyPasswordField.getText();
-        addUser("faculty_data", email, password);
+        try {
+            String email = FacultyEmailField.getText();
+            String password = FacultyPasswordField.getText();
+
+            String result = ApiClient.addFaculty(email, password);
+            System.out.println("Backend response: " + result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void addStudent() {
-        String email = StudentEmailField.getText();
-        String password = StudentPasswordField.getText();
-        addUser("student_data", email, password);
-    }
+        try {
+            String email = StudentEmailField.getText();
+            String password = StudentPasswordField.getText();
 
-    private void addUser(String table, String email, String password) {
-        System.out.println("Email: " + email + ", Password: " + password);
-
-
-        String query = "INSERT INTO " + table + " (email, password) VALUES (?, ?)";
-
-        try (Connection conn = DatabaseConnection.connect();
-             PreparedStatement stmt = conn.prepareStatement(query)) {
-
-            conn.setAutoCommit(true);
-            stmt.setString(1, email);
-            stmt.setString(2, password);
-            stmt.executeUpdate();
-            System.out.println("Insert successful!");
-
-        } catch (SQLException e) {
+            String result = ApiClient.addStudent(email, password);
+            System.out.println("Backend response: " + result);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

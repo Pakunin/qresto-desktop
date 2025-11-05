@@ -47,16 +47,24 @@ public class LoginController {
     }
 
     private void LoginHandler(ActionEvent event){
-        String db_password = passwordField.getText();
+        try {
+            String db_password = passwordField.getText();
+            String email = emailField.getText();
 
-        if (!emailField.isVisible() && db_password != null && Objects.equals(db_password, "test")){
-            SceneManager.changeScene(event, "AdminLogin.fxml");
-        }
+            if (!emailField.isVisible()){
+                if (db_password.equals("qradmin")) {
+                    SceneManager.changeScene(event, "AdminLogin.fxml");
+                }
+            } else if(emailField.isVisible() && passwordField.isVisible()) {
+                String result = ApiClient.facultyLogin(email, db_password);
+//                System.out.println(result);
+                if(result.equals("success")){
+                    SceneManager.changeScene(event, "FacultyLogin.fxml");
+                }
 
-        else {
-            SceneManager.changeScene(event, "FacultyLogin.fxml");
+            }
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
-
-
 }

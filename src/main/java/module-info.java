@@ -15,6 +15,8 @@ module proj.qr_attendance_system {
     requires java.desktop;
     requires com.google.zxing.javase;
     requires javafx.swing;
+    requires java.net.http;
+    requires okhttp3;
 
     opens proj.qr_attendance_system to javafx.fxml;
     exports proj.qr_attendance_system;

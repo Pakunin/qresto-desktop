@@ -33,30 +33,33 @@
       <!-- MAIN CONTENT -->
       <AnchorPane layoutX="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="upload" layoutX="99.0" layoutY="89.0" prefHeight="61.0" prefWidth="321.0" text="UPLOAD ACCOUNTS">
+            <Label id="upload" layoutX="99.0" layoutY="53.0" prefHeight="61.0" prefWidth="323.0" text="UPLOAD ACCOUNTS">
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
                         <Stop>
-                           <color><Color red="0.13725490868091583" green="0.05098039284348488" blue="0.501960813999176" /></color>
+                           <color>
+                              <Color red="0.6709429621696472" green="0.6480262875556946" blue="0.7105262875556946" />
+                           </color>
                         </Stop>
                         <Stop offset="1.0">
-                           <color><Color red="0.2185012549161911" green="0.1641691029071808" blue="0.46052631735801697" /></color>
+                           <color>
+                              <Color red="0.6089181303977966" green="0.5467836260795593" blue="0.6710526347160339" />
+                           </color>
                         </Stop>
                      </stops>
                   </LinearGradient>
-               </textFill>
-            </Label>
+               </textFill></Label>
 
-            <Label id="data_label" layoutX="99.0" layoutY="381.0" text="STUDENT DETAILS" textFill="WHITE" />
-            <TextField id="emailField" fx:id="StudentEmailField" layoutX="99.0" layoutY="423.0" prefHeight="32.0" prefWidth="388.0" promptText="EMAIL" />
-            <PasswordField fx:id="StudentPasswordField" layoutX="99.0" layoutY="470.0" prefHeight="32.0" prefWidth="388.0" promptText="PASSWORD" />
-            <Button id="cbt" layoutX="99.0" layoutY="515.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="32.0" prefWidth="74.0" text="UPLOAD" textFill="WHITE" />
+            <Label id="data_label" layoutX="100.0" layoutY="349.0" text="STUDENT DETAILS" textFill="WHITE" />
+            <TextField id="emailField" fx:id="StudentEmailField" layoutX="99.0" layoutY="383.0" prefHeight="32.0" prefWidth="388.0" promptText="EMAIL" />
+            <PasswordField fx:id="StudentPasswordField" layoutX="99.0" layoutY="430.0" prefHeight="32.0" prefWidth="388.0" promptText="PASSWORD" />
+            <Button id="cbt" layoutX="99.0" layoutY="475.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="32.0" prefWidth="74.0" text="UPLOAD" textFill="WHITE" />
 
-            <Label id="data_label" layoutX="99.0" layoutY="191.0" text="FACULTY DETAILS" textFill="WHITE" />
-            <TextField id="emailField" fx:id="FacultyEmailField" layoutX="99.0" layoutY="233.0" prefHeight="32.0" prefWidth="388.0" promptText="EMAIL" />
-            <PasswordField fx:id="FacultyPasswordField" layoutX="99.0" layoutY="282.0" prefHeight="32.0" prefWidth="388.0" promptText="PASSWORD" />
-            <Button id="cbt" layoutX="99.0" layoutY="325.0" mnemonicParsing="false" onAction="#addFaculty" prefHeight="32.0" prefWidth="74.0" text="UPLOAD" textFill="WHITE" />
+            <Label id="data_label" layoutX="100.0" layoutY="159.0" text="FACULTY DETAILS" textFill="WHITE" />
+            <TextField id="emailField" fx:id="FacultyEmailField" layoutX="99.0" layoutY="193.0" prefHeight="32.0" prefWidth="388.0" promptText="EMAIL" />
+            <PasswordField fx:id="FacultyPasswordField" layoutX="99.0" layoutY="242.0" prefHeight="32.0" prefWidth="388.0" promptText="PASSWORD" />
+            <Button id="cbt" layoutX="99.0" layoutY="285.0" mnemonicParsing="false" onAction="#addFaculty" prefHeight="32.0" prefWidth="74.0" text="UPLOAD" textFill="WHITE" />
 
          </children>
       </AnchorPane>

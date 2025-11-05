@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.PasswordField?>
 <AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="709.0" prefWidth="1042.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proj.qr_attendance_system.LoginController">
    <children>
       <StackPane id="sidepane" maxWidth="400.0" prefHeight="710.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -39,7 +40,7 @@
          <children>
             <VBox fx:id="loginForm" alignment="CENTER" spacing="15">
                <TextField fx:id="emailField" maxWidth="300.0" prefHeight="30.0" prefWidth="275.0" promptText="EMAIL" />
-               <TextField fx:id="passwordField" maxWidth="300.0" prefHeight="30.0" prefWidth="275.0" promptText="PASSWORD" />
+               <PasswordField fx:id="passwordField" maxWidth="300.0" prefHeight="30.0" prefWidth="275.0" promptText="PASSWORD" />
                <Button id="loginbt" fx:id="loginbt" maxWidth="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="LOGIN" textFill="WHITE">
                        <font>
                           <Font size="12.0" />

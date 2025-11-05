@@ -51,7 +51,7 @@ public class FacultyControls {
             return;
         }
 
-        String qrData = "Course Name: " + courseName + "\nCourse Code: " + courseCode;
+        String qrData = courseName + ":" + courseCode;
 
         try{
             QRCodeWriter qrCodeWriter = new QRCodeWriter();

@@ -34,22 +34,22 @@
       <!-- MAIN CONTENT -->
       <AnchorPane layoutX="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="upload" layoutX="99.0" layoutY="48.0" prefHeight="61.0" prefWidth="239.0" text="COURSE DETAILS">
+            <Label id="upload" layoutX="99.0" layoutY="48.0" prefHeight="61.0" prefWidth="282.0" text="COURSE DETAILS">
                <textFill>
-                  <LinearGradient>
+                  <LinearGradient endX="1.0" endY="1.0">
                      <stops>
                         <Stop>
-                           <color><Color red="0.13725490868091583" green="0.05098039284348488" blue="0.501960813999176" /></color>
+                           <color><Color red="0.5409864187240601" green="0.5147417187690735" blue="0.6578947305679321" /></color>
                         </Stop>
                         <Stop offset="1.0">
-                           <color><Color red="0.2185012549161911" green="0.1641691029071808" blue="0.46052631735801697" /></color>
+                           <color><Color red="0.45009949803352356" green="0.4269615113735199" blue="0.5657894611358643" /></color>
                         </Stop>
                      </stops>
                   </LinearGradient>
                </textFill>
             </Label>
             <TextField id="emailField" fx:id="courseNameField" layoutX="99.0" layoutY="118.0" prefHeight="32.0" prefWidth="388.0" promptText="COURSE TITLE" />
-            <PasswordField fx:id="courseCodeField" layoutX="509.0" layoutY="118.0" prefHeight="32.0" prefWidth="151.0" promptText="COURSE CODE" />
+            <TextField fx:id="courseCodeField" layoutX="509.0" layoutY="118.0" prefHeight="32.0" prefWidth="151.0" promptText="COURSE CODE" />
             <Button id="cbt" fx:id="generateQRButton" layoutX="99.0" layoutY="176.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" text="GENERATE QR" textFill="WHITE" />
             <ImageView fx:id="qrImageView" fitHeight="250.0" fitWidth="250.0" layoutX="99.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true" />
 
