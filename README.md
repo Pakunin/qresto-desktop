@@ -29,11 +29,11 @@ This desktop interface connects directly to the backend REST API (Spring Boot + 
 ---
 
 ###  Architecture Flow
-Frontend Apps (JavaFX + Android)
-↓
-REST API (Spring Boot)
-↓
-MongoDB Atlas Cloud Database
+Frontend Apps (JavaFX + Android)  
+↓  
+REST API (Spring Boot)  
+↓  
+MongoDB Atlas Cloud Database  
 
 ---
 
